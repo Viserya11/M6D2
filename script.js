@@ -3,6 +3,7 @@ const hideBtn = document.querySelectorAll("#hide")
 const input = document.querySelector('#searchInput')
 let alert = document.querySelector('#alert')
 let slideimages = document.querySelectorAll('.modalimg')
+let modalbody = document.querySelector('.modal-body')
 
 const options = {
     headers: { Authorization: '563492ad6f91700001000001e643bb81808e4ec1a0fae7ce5275063f'
@@ -120,3 +121,5 @@ fetchForest = () => {
 }
 
 $(fetchForest)
+
+modalbody.innerHTML = ""
