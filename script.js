@@ -104,8 +104,7 @@ const slideoptions = {
     }
 }
 
-showForest = (photos) => {
-    slideimages.innerHTML = ""
+
     showForest = (photos) => {
         console.log(photos);
         slideimages.innerHTML = "";
