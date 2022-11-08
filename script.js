@@ -1,5 +1,5 @@
 let generate = document.querySelector(".generate")
-let hideButton = document.querySelectorAll(".hide")
+
 
 const options = {
     headers: { Authorization: '563492ad6f91700001000001e643bb81808e4ec1a0fae7ce5275063f'
@@ -32,7 +32,7 @@ loadPics = (photos) => {
             </button>
             <button
             type="button"
-            class="btn btn-sm btn-outline-secondary"
+            class="btn btn-sm btn-outline-secondary" id="hide"
             >
             Hide
             </button>
@@ -42,6 +42,10 @@ loadPics = (photos) => {
     </div>
     </div>
     </div>`
+    }
+const hideBtn = document.querySelectorAll("#hide")
+for (btn of hideBtn) {
+    btn.addEventListener('click', hideCard)
 }
 }
 
@@ -57,6 +61,6 @@ const loadSec = () => {
     .then(response => loadPics(response.photos))
 }
 
-const hideBtn = () => {
-    generate.innerHTML = ""
+const hideCard = (e) => {
+    e.path[5].style.display = 'none'
 }
