@@ -106,11 +106,16 @@ const slideoptions = {
 
 showForest = (photos) => {
     slideimages.innerHTML = ""
-    for (let photo of photos) {
-    slideimages.innerHTML += `
+    showForest = (photos) => {
+        console.log(photos);
+        slideimages.innerHTML = "";
+        for (let photo of photos) {
+            let randomCarouselImage =
+                slideimages[Math.floor(Math.random() * slideimages.length)];
+            randomCarouselImage.src = photo.src.large;
     
    
-    <img class="d-block w-100" id="modalimg" src="${photo.src.large}" alt="slide">`
+    //<img class="d-block w-100" id="modalimg" src="${photo.src.large}" alt="slide">`
     
 
 }
