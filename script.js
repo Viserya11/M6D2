@@ -1,6 +1,5 @@
 let generate = document.querySelector(".generate")
 let hideButton = document.querySelectorAll(".hide")
-let hiddenContent = document.querySelectorAll(".col-md-4  hidecard")
 
 const options = {
     headers: { Authorization: '563492ad6f91700001000001e643bb81808e4ec1a0fae7ce5275063f'
@@ -32,11 +31,11 @@ loadPics = (photos) => {
             View
             </button>
             <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary hide" onclick="hideBtn()"
-                      >
-                        Hide
-                      </button>
+            type="button"
+            class="btn btn-sm btn-outline-secondary"
+            >
+            Hide
+            </button>
         </div>
         <small class="text-muted">9 mins</small>
         </div>
@@ -59,5 +58,5 @@ const loadSec = () => {
 }
 
 const hideBtn = () => {
-    hiddenContent.innerHTML = ""
+    generate.innerHTML = ""
 }
