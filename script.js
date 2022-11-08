@@ -1,5 +1,6 @@
 let generate = document.querySelector(".generate")
-
+const hideBtn = document.querySelectorAll("#hide")
+const input = document.querySelector('#searchInput')
 
 const options = {
     headers: { Authorization: '563492ad6f91700001000001e643bb81808e4ec1a0fae7ce5275063f'
@@ -37,7 +38,7 @@ loadPics = (photos) => {
             Hide
             </button>
         </div>
-        <small class="text-muted">9 mins</small>
+        <small class="text-muted">${photo.id}</small>
         </div>
     </div>
     </div>
@@ -65,4 +66,18 @@ const hideCard = (e) => {
     e.path[5].style.display = 'none'
 }
 
-btn.addEventListener('click', hideCard)
+for (btn of hideBtn) {
+    btn.addEventListener('click', hideCard)
+}
+
+const searchPics = (event) => {
+
+    const searchTerm = event.target.value
+
+    fetch(`https://api.pexels.com/v1/search?query=${searchTerm}`, options)
+    .then((response) => response.json())
+    .then(response => loadPics(response.photos))
+
+}
+
+input.addEventListener("input", searchPics) 
