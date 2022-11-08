@@ -2,7 +2,7 @@ let generate = document.querySelector(".generate")
 const hideBtn = document.querySelectorAll("#hide")
 const input = document.querySelector('#searchInput')
 let alert = document.querySelector('#alert')
-let slideimages = document.querySelectorAll('#modalimg')
+let slideimages = document.querySelectorAll('.modalimg')
 
 const options = {
     headers: { Authorization: '563492ad6f91700001000001e643bb81808e4ec1a0fae7ce5275063f'
@@ -29,7 +29,7 @@ loadPics = (photos) => {
         <div class="btn-group">
             <button
             type="button"
-            class="btn btn-sm btn-outline-secondary"
+            class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModal"
             >
             View
             </button>
@@ -45,6 +45,7 @@ loadPics = (photos) => {
     </div>
     </div>
     </div>`
+    
     
     }
 const hideBtn = document.querySelectorAll("#hide")
