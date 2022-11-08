@@ -105,7 +105,7 @@ input.addEventListener("input", searchPics)
         for (let photo of photos) {
             let randomCarouselImage =
                 slideimages[Math.floor(Math.random() * slideimages.length)];
-            randomCarouselImage.src = photo.src.large;
+            randomCarouselImage.src = photo.src.medium;
     
    
     //<img class="d-block w-100" id="modalimg" src="${photo.src.large}" alt="slide">`
@@ -122,4 +122,4 @@ fetchForest = () => {
 
 $(fetchForest)
 
-modalbody.innerHTML = ""
+
