@@ -98,13 +98,6 @@ const searchPics = (event) => {
 
 input.addEventListener("input", searchPics) 
 
-const slideoptions = {
-    headers: { Authorization: '563492ad6f91700001000001e643bb81808e4ec1a0fae7ce5275063f'
-
-    }
-}
-
-
     showForest = (photos) => {
         console.log(photos);
         slideimages.innerHTML = "";
