@@ -118,3 +118,5 @@ fetchForest = () => {
     .then((response) => response.json())
     .then(response => showForest(response.photos))
 }
+
+$(fetchForest)
