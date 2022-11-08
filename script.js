@@ -64,3 +64,5 @@ const loadSec = () => {
 const hideCard = (e) => {
     e.path[5].style.display = 'none'
 }
+
+btn.addEventListener('click', hideCard)
