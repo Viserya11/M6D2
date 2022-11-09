@@ -122,4 +122,18 @@ fetchForest = () => {
 
 $(fetchForest)
 
+const modalPic = () => {
+modalbody.innerHTML = ""
+
+}
+
+modalPic()
+
+//const hideModal = () => {
+   //let modal = document.querySelector('.modal')
+   //$('.modal-backdrop').remove()
+   //modal.remove()
+
+   
+//}
 
